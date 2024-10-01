@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Marks Analysis</title>
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+    </head>
+    <body>
+        
+        <div class="container mt-5">
+            <h2 class="text-center" id="header"><strong>MARKS ANALYSIS</strong></h2>
+            <form id="dataForm">
+                <div class="form-group">
+                    <label for="name" ><strong>Student Name</strong></label>
+                    <input type="text" class="form-control" id="name"
+                        placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <div class="mb-3">
+                        <label><strong>Web Technology</strong></label>
+                        <input type="number" class="form-control" id="webTech"
+                            placeholder="Marks" required min="0" max="100">
+                    </div>
+                    <div class="mb-3">
+                        <label><strong>DBMS</strong></label>
+                        <input type="number" class="form-control" id="dbms"
+                            placeholder="Marks" required min="0" max="100">
+                    </div>
+                    <div class="mb-3">
+                        <label><strong>HCI</strong></label>
+                        <input type="number" class="form-control" id="hci"
+                            placeholder="Marks" required min="0" max="100">
+                    </div>
+                    <div class="mb-3">
+                        <label><strong>Artificial Intelligence</strong></label>
+                        <input type="number" class="form-control" id="ai"
+                            placeholder="Marks" required min="0" max="100">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success">submit</button>
+            </form>
+        </div>
+        
+        <div id="result" class="result mt-3"></div>
+
+        <div class="container mt-4" id="graphContainer" style="display:none;">
+            <canvas id="marksChart"></canvas>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="script.js">
+            </script>
+    </body>
+</html>
